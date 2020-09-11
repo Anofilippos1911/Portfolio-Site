@@ -1,0 +1,653 @@
+:root {
+	--color-white: #fff;
+	--color-gray: rgb(63, 62, 62);
+	--color-gray-light-1: #ccc;
+	--color-gray-light-2: #c0bdbd;
+	--color-gray-light-3: #bbb8b4;
+	--color-gray-light-4: #d9d7d3;
+	--color-gray-dark: #333;
+	--color-red: #e43e3e;
+	--color-purple: #5721ebf1;
+	--color-red-light: #da627d;
+	--color-yellow: #ffd98a;
+	--color-blue: #2477fb;
+	--color-light-blue: #47a5c2;
+	--color-green: #b9ffbc;
+	--shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+	--shadow-small: 0 0 0.6rem rgba(0, 0, 0, 0.3);
+	--shadow-yellow: 0 2rem 6rem rgba(255, 218, 138, 0.205);
+}
+
+/* .all {
+	width: 30%;
+	float: left;
+	margin: 1.66%;
+} */
+
+html {
+	scroll-behavior: smooth;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	margin: 18px 0;
+	position: relative;
+	background: -moz-linear-gradient(
+		left,
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0) 10%,
+		rgba(0, 0, 0, 0.65) 50%,
+		rgba(0, 0, 0, 0) 90%,
+		rgba(0, 0, 0, 0) 100%
+	); /* FF3.6+ */
+	background: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		color-stop(0%, rgba(0, 0, 0, 0)),
+		color-stop(10%, rgba(0, 0, 0, 0)),
+		color-stop(50%, rgba(0, 0, 0, 0.65)),
+		color-stop(90%, rgba(0, 0, 0, 0)),
+		color-stop(100%, rgba(0, 0, 0, 0))
+	); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(
+		left,
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0) 10%,
+		rgba(0, 0, 0, 0.65) 50%,
+		rgba(0, 0, 0, 0) 90%,
+		rgba(0, 0, 0, 0) 100%
+	); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(
+		left,
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0) 10%,
+		rgba(0, 0, 0, 0.65) 50%,
+		rgba(0, 0, 0, 0) 90%,
+		rgba(0, 0, 0, 0) 100%
+	); /* Opera 11.10+ */
+	background: -ms-linear-gradient(
+		left,
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0) 10%,
+		rgba(0, 0, 0, 0.65) 50%,
+		rgba(0, 0, 0, 0) 90%,
+		rgba(0, 0, 0, 0) 100%
+	); /* IE10+ */
+	background: linear-gradient(
+		left,
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0) 10%,
+		rgba(0, 0, 0, 0.65) 50%,
+		rgba(0, 0, 0, 0) 90%,
+		rgba(0, 0, 0, 0) 100%
+	); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(
+			startColorstr='#00000000',
+			endColorstr='#00000000',
+			GradientType=1
+		); /* IE6-9 */
+}
+
+hr:before {
+	content: "";
+	display: block;
+	border-top: solid 1px #f9f9f9;
+	width: 100%;
+	height: 1px;
+	position: absolute;
+	top: 50%;
+	z-index: 1;
+}
+
+body {
+	background: -webkit-linear-gradient(to right, #fdeaeb, #aee8fa, #b6f6cf, #fae7bc); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #fdeaeb, #aee8fa, #b6f6cf, #fae7bc);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	padding: 0;
+	margin: 0;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 700;
+	font-size: x-large;
+	line-height: 1.5;
+}
+
+a {
+	color: var(--color-red-light);
+}
+
+#SectionName {
+	width: 100%;
+	line-height: 2.5;
+	color: #57e0ca;
+	margin: 30;
+}
+
+button {
+	background: #57e0ca;
+	border: lawngreen 2px solid;
+	height: 80px;
+	width: 200px;
+	margin-top: 70;
+}
+
+.side-nav {
+	width: 13%;
+	height: 70%;
+	position: fixed;
+	background: transparent;
+	padding-top: 20;
+	font-size: 2rem;
+	list-style: none;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	/* align-items: center; */
+	-ms-flex-pack: distribute;
+	justify-content: space-between;
+	flex: shrink;
+	transition: 0.5s;
+	float: left;
+	z-index: 1;
+	left: -30;
+}
+
+/* .sidenav a:hover {
+	color: #af2d2d;
+} */
+.content {
+	position: absolute;
+	width: 87%;
+	height: 100%;
+	float: right;
+	right: 50;
+	padding-right: 10px;
+	transition: 0.5s;
+}
+
+#about {
+	color: #3b8cc2;
+}
+
+.typewriter h1 {
+	font-family: monospace;
+	overflow: hidden;
+	white-space: nowrap;
+	margin: 0 auto;
+	padding-top: 10;
+	letter-spacing: .15em;
+	animation: typing 4s steps(30, end), blink-caret .5s step-end infinite;
+}
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+.section-title {
+	text-align: left;
+}
+h2 {
+	color: var(--color-light-blue);
+}
+h4 {
+	color: #bd42e2b2;
+}
+#greetings {
+	color: #45d645;
+	text-align: center;
+	transition: 1.5s;
+}
+#copyrights {
+	color: #45d645;
+	text-align: right;
+}
+#contact {
+	color: #45d645;
+	text-align: center;
+}
+form {
+	float: right;
+	width: 87%;
+}
+input {
+	background: rgb(250, 234, 191);
+}
+textarea {
+	background: rgb(250, 234, 191);
+}
+
+img {
+	border: 5px solid #e9bf89;
+}
+
+.skills__lang,
+.skills__frame,
+.skills__front,
+.skills__back,
+.skills__tools {
+	font-size: 120px;
+	height: 350px;
+	width: 20%;
+	float: left;
+}
+
+/* {
+	font-size: 100px;
+	height: 350px;
+	justify-content: space-between;
+	width: 33%;
+	float: right;
+} */
+
+.skills__certs {
+	font-size: 20px;
+	height: 350px;
+	justify-content: space-between;
+	width: 33%;
+	float: left;
+}
+
+.side-nav__item:hover::before,
+.side-nav__item--active::before {
+	-webkit-transform: scaleY(1);
+	transform: scaleY(1);
+	width: 100%;
+}
+.side-nav__item:active::before {
+	background: var(--color-blue);
+}
+.side-nav__link:link,
+.side-nav__link:visited {
+	letter-spacing: 2px;
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	transition: 1.5s;
+}
+
+/* .container {
+	width: 87%;
+	height: 1000px;
+	margin: auto;
+	padding: 10px;
+} */
+
+.one,
+.three,
+.five,
+.seven,
+.nine {
+	width: 33%;
+	height: 250px;
+	float: left;
+}
+
+.two,
+.four,
+.six,
+.eight {
+	width: 33%;
+	height: 250px;
+	float: right;
+}
+
+footer {
+	color: whitesmoke;
+}
+
+section {
+	height: 1000px;
+}
+#skills {
+	justify-items: center;
+}
+
+.iconDetails {
+	margin-right: 5%;
+	float: left;
+	height: auto;
+	width: 400px;
+}
+
+.iconDetails2 {
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+}
+
+@media (min-width: 320px) {
+	section {
+		height: 1000px;
+	}
+	.side-nav {
+		height: 50%;
+		font-size: 80%;
+		justify-content: space-between;
+		float: left;
+		left: 0;
+	}
+	.content {
+		position: absolute;
+		width: 85%;
+		height: 85%;
+		float: left;
+		left: 150;
+		padding-right: 8px;
+		transition: 0.5s;
+		font-size: 85%;
+	}
+	.iconDetails {
+		margin-right: 5%;
+		float: left;
+		height: auto;
+		width: 400px;
+	}
+
+	.iconDetails2 {
+		max-width: 70%;
+		float: right;
+		display: block;
+	}
+	.typewriter h1 {
+		font-size: 95%;
+		padding-bottom: 55;
+	}
+	#SectionName {
+		width: 40%;
+		line-height: 2.5;
+		padding-right: 100;
+		padding-bottom: 20;
+	}
+	button {
+		height: 100px;
+		width: 200px;
+	}
+	#about {
+		font-size: 90%;
+	}
+	.skills__lang,
+	.skills__frame,
+	.skills__front,
+	.skills__back,
+	.skills__tools {
+		font-size: 60px;
+		padding-top: 50;
+	}
+	.skills__certs {
+		font-size: 35px;
+		width: 95%;
+		padding-top: 50;
+	}
+}
+
+@media (min-width: 576px) {
+	section {
+		height: 1000px;
+	}
+	.side-nav {
+		height: 50%;
+		font-size: 80%;
+		justify-content: space-between;
+		float: left;
+		left: 0;
+	}
+	.content {
+		position: absolute;
+		width: 85%;
+		height: 85%;
+		float: left;
+		left: 150;
+		padding-right: 8px;
+		transition: 0.5s;
+		font-size: 85%;
+	}
+	.iconDetails {
+		margin-right: 5%;
+		float: left;
+		height: auto;
+		width: 400px;
+	}
+
+	.iconDetails2 {
+		max-width: 70%;
+		float: right;
+		display: block;
+	}
+	.typewriter h1 {
+		font-size: 95%;
+		padding-bottom: 55;
+	}
+	#SectionName {
+		width: 40%;
+		line-height: 2.5;
+		padding-right: 100;
+		padding-bottom: 20;
+	}
+	button {
+		height: 100px;
+		width: 200px;
+	}
+	#about {
+		font-size: 90%;
+	}
+	.skills__lang,
+	.skills__frame,
+	.skills__front,
+	.skills__back,
+	.skills__tools {
+		font-size: 60px;
+		padding-top: 50;
+	}
+	.skills__certs {
+		font-size: 35px;
+		width: 95%;
+		padding-top: 50;
+	}
+}
+
+@media (min-width: 768px) {
+	section {
+		height: 1000px;
+	}
+	.side-nav {
+		height: 50%;
+		font-size: 80%;
+		justify-content: space-between;
+		float: left;
+		left: 0;
+	}
+	.content {
+		position: absolute;
+		width: 85%;
+		height: 85%;
+		float: left;
+		left: 150;
+		padding-right: 8px;
+		transition: 0.5s;
+		font-size: 85%;
+	}
+	.iconDetails {
+		margin-right: 5%;
+		float: left;
+		height: auto;
+		width: 400px;
+	}
+
+	.iconDetails2 {
+		max-width: 70%;
+		float: right;
+		display: block;
+	}
+	.typewriter h1 {
+		font-size: 95%;
+		padding-bottom: 55;
+	}
+	#SectionName {
+		width: 45%;
+		line-height: 1.5;
+		padding-right: 100;
+		padding-bottom: 20;
+	}
+	button {
+		height: 100px;
+		width: 200px;
+	}
+	#about {
+		font-size: 90%;
+	}
+	.skills__lang,
+	.skills__frame,
+	.skills__front,
+	.skills__back,
+	.skills__tools {
+		font-size: 60px;
+		padding-top: 40;
+	}
+	.skills__certs {
+		font-size: 35px;
+		width: 95%;
+		padding-top: 50;
+	}
+}
+
+@media (min-width: 992px) {
+	section {
+		height: 750px;
+	}
+	.side-nav {
+		height: 60%;
+		font-size: 80%;
+		justify-content: space-between;
+		float: left;
+		left: -20;
+	}
+	.content {
+		position: absolute;
+		width: 80%;
+		height: 85%;
+		float: left;
+		left: 150;
+		padding-right: 8px;
+		transition: 0.5s;
+		font-size: 80%;
+	}
+	.iconDetails {
+		margin-right: 5%;
+		float: left;
+		height: auto;
+		width: 400px;
+	}
+
+	.iconDetails2 {
+		max-width: 60%;
+		float: right;
+		display: block;
+	}
+	.typewriter h1 {
+		font-size: 95%;
+	}
+	#SectionName {
+		width: 43%;
+		line-height: 1.5;
+		margin: 30;
+	}
+	button {
+		height: 80px;
+		width: 200px;
+		margin-top: 60;
+	}
+	#about {
+		font-size: 90%;
+	}
+	.skills__lang,
+	.skills__frame,
+	.skills__front,
+	.skills__back,
+	.skills__tools {
+		font-size: 65px;
+	}
+	.skills__certs {
+		font-size: 35px;
+		width: 90%;
+	}
+}
+
+@media (min-width: 1200px) {
+	section {
+		height: 750px;
+	}
+	.side-nav {
+		height: 65%;
+		font-size: 85%;
+		justify-content: space-between;
+		float: left;
+		left: 10;
+	}
+	.content {
+		position: absolute;
+		width: 87%;
+		height: 90%;
+		float: left;
+		left: 150;
+		padding-right: 10px;
+		transition: 0.5s;
+		font-size: 95%;
+	}
+	.iconDetails {
+		margin-right: 5%;
+		float: left;
+		height: auto;
+		width: 400px;
+	}
+
+	.iconDetails2 {
+		max-width: 60%;
+		float: right;
+		display: block;
+	}
+	.typewriter h1 {
+		font-size: 95%;
+	}
+	#SectionName {
+		width: 45%;
+		line-height: 2;
+	}
+	button {
+		height: 80px;
+		width: 200px;
+	}
+	#about {
+		font-size: 90%;
+	}
+	.skills__lang,
+	.skills__frame,
+	.skills__front,
+	.skills__back,
+	.skills__tools {
+		font-size: 90px;
+	}
+	.skills__certs {
+		font-size: 35px;
+		width: 90%;
+	}
+}
