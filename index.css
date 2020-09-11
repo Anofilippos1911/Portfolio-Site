@@ -125,6 +125,7 @@ a {
 	line-height: 2.5;
 	color: #57e0ca;
 	margin: 30;
+	font-family: 'Dancing Script', cursive;
 }
 
 button {
@@ -216,6 +217,7 @@ h4 {
 #copyrights {
 	color: #45d645;
 	text-align: right;
+	font-family: 'Dancing Script', cursive;
 }
 #contact {
 	color: #45d645;
