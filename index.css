@@ -30,7 +30,7 @@ html {
 
 hr {
 	border: 0;
-	height: 1px;
+	height: 2px;
 	margin: 18px 0;
 	position: relative;
 	background: -moz-linear-gradient(
@@ -138,7 +138,7 @@ button {
 
 .side-nav {
 	width: 13%;
-	height: 80%;
+	height: 70%;
 	position: fixed;
 	background: transparent;
 	padding-top: 20;
@@ -238,14 +238,7 @@ img {
 	border: 5px solid #e9bf89;
 }
 
-.skills__lang {
-	font-size: 8px;
-	height: 250px;
-	width: 20%;
-	float: left;
-}
-
-
+.skills__lang,
 .skills__frame,
 .skills__front,
 .skills__back,
@@ -272,7 +265,7 @@ img {
 	float: left;
 }
 
-/*.side-nav__item:hover::before,
+.side-nav__item:hover::before,
 .side-nav__item--active::before {
 	-webkit-transform: scaleY(1);
 	transform: scaleY(1);
@@ -280,7 +273,7 @@ img {
 }
 .side-nav__item:active::before {
 	background: var(--color-blue);
-}*/
+}
 .side-nav__link:link,
 .side-nav__link:visited {
 	letter-spacing: 2px;
@@ -334,16 +327,14 @@ section {
 .iconDetails {
 	margin-right: 5%;
 	float: left;
-	height: 300px;
-	width: 200px;
+	height: auto;
+	width: 400px;
 }
 
 .iconDetails2 {
+	max-width: 100%;
+	max-height: 100%;
 	display: block;
-	margin-right: 15%;
-	float: left;
-	width: auto;
-	height: auto;
 }
 
 @media (min-width: 320px) {
@@ -352,7 +343,7 @@ section {
 	}
 	.side-nav {
 		height: 50%;
-		font-size: 60%;
+		font-size: 80%;
 		justify-content: space-between;
 		float: left;
 		left: 0;
@@ -362,7 +353,7 @@ section {
 		width: 85%;
 		height: 85%;
 		float: left;
-		left: 120;
+		left: 150;
 		padding-right: 8px;
 		transition: 0.5s;
 		font-size: 85%;
@@ -394,15 +385,9 @@ section {
 		width: 200px;
 	}
 	#about {
-		font-size: 50%;
+		font-size: 90%;
 	}
-	.skills__lang {
-		font-size: 60px;
-		padding-top: 50;
-		height: 80px;
-	}
-
-
+	.skills__lang,
 	.skills__frame,
 	.skills__front,
 	.skills__back,
@@ -411,7 +396,7 @@ section {
 		padding-top: 50;
 	}
 	.skills__certs {
-		font-size: 10px;
+		font-size: 35px;
 		width: 95%;
 		padding-top: 50;
 	}
@@ -467,13 +452,7 @@ section {
 	#about {
 		font-size: 90%;
 	}
-
-	.skills__lang {
-		font-size: 60px;
-		padding-top: 50;
-		height: 80px;
-	}
-
+	.skills__lang,
 	.skills__frame,
 	.skills__front,
 	.skills__back,
@@ -482,15 +461,11 @@ section {
 		padding-top: 50;
 	}
 	.skills__certs {
-		font-size: 23px;
+		font-size: 35px;
 		width: 95%;
 		padding-top: 50;
 	}
 }
-
-/*#slide {
-    position: absolute; left: 24px; top: 2500px;
-}*/
 
 @media (min-width: 768px) {
 	section {
@@ -542,13 +517,7 @@ section {
 	#about {
 		font-size: 90%;
 	}
-
-	.skills__lang {
-		font-size: 60px;
-		padding-top: 50;
-		height: 80px;
-	}
-
+	.skills__lang,
 	.skills__frame,
 	.skills__front,
 	.skills__back,
@@ -557,7 +526,7 @@ section {
 		padding-top: 40;
 	}
 	.skills__certs {
-		font-size: 25px;
+		font-size: 35px;
 		width: 95%;
 		padding-top: 50;
 	}
@@ -565,7 +534,7 @@ section {
 
 @media (min-width: 992px) {
 	section {
-		height: 1000px;
+		height: 750px;
 	}
 	.side-nav {
 		height: 60%;
@@ -612,13 +581,7 @@ section {
 	#about {
 		font-size: 90%;
 	}
-
-	.skills__lang {
-		font-size: 60px;
-		padding-top: 50;
-		height: 80px;
-	}
-
+	.skills__lang,
 	.skills__frame,
 	.skills__front,
 	.skills__back,
@@ -626,7 +589,7 @@ section {
 		font-size: 65px;
 	}
 	.skills__certs {
-		font-size: 25px;
+		font-size: 35px;
 		width: 90%;
 	}
 }
@@ -678,13 +641,7 @@ section {
 	#about {
 		font-size: 90%;
 	}
-
-	.skills__lang {
-		font-size: 60px;
-		padding-top: 50;
-		height: 80px;
-	}
-
+	.skills__lang,
 	.skills__frame,
 	.skills__front,
 	.skills__back,
@@ -692,7 +649,7 @@ section {
 		font-size: 90px;
 	}
 	.skills__certs {
-		font-size: 30px;
+		font-size: 35px;
 		width: 90%;
 	}
 }
