@@ -8,6 +8,28 @@
 		<link rel="stylesheet" href="index.css">
 		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script>
+			var slideimages = new Array();
+			slideimages[0] = new Image();
+			slideimages[0].src="colorgame.png"
+			slideimages[1] = new Image();
+			slideimages[1].src="ecommshop.png"
+			slideimages[2] = new Image();
+			slideimages[2].src="MazeGame.jpg"
+			slideimages[3] = new Image();
+			slideimages[3].src="Movies.jpg"
+			slideimages[4] = new Image();
+			slideimages[4].src="secretmess.png"
+			slideimages[5] = new Image();
+			slideimages[5].src="Shapes.png"
+			slideimages[6] = new Image();
+			slideimages[6].src="timer.png"
+			slideimages[7] = new Image();
+			slideimages[7].src="todolist.png"
+			slideimages[8] = new Image();
+			slideimages[8].src="yelpcamp.jpg"
+		</script>
     </head>
     <body>	
 		
@@ -65,6 +87,23 @@
 							<br>
 							<!-- <button class="btn btn-outline-success btn-lg onclick="ShowAndHide()">Success</button> -->
 							<a href="#about">Get to know me more</a>
+
+							<img src="images/slide1.jpg" id="slide" style="width: 90%; height: auto">
+					
+							<script>
+								var step=0;
+								function slideshow(){
+									document.getElementById('slide').src = slideimages[step].src;
+									if (step<2) {
+										step++;
+									} else {
+										step=0;
+									}
+									setTimeout(slideshow,5000);
+								}
+								slideshow();
+							</script>
+
 						</div>
 					</section>
 
@@ -73,7 +112,7 @@
 					<section id="about">
 						<div class='container'>
 							<div>
-								<img src='https://scontent.fnic1-1.fna.fbcdn.net/v/t1.0-9/13654169_10210173004019799_2604763599305371047_n.jpg?_nc_cat=109&_nc_sid=174925&_nc_ohc=qOBMEUJRLz0AX-V8A0-&_nc_ht=scontent.fnic1-1.fna&oh=80bb2a7bdb65f2d2b9dcdcddde2817a9&oe=5F70D616' class='iconDetails'>
+								<img src="me.jpg" class='iconDetails' style="width: 90%; height: auto">
 							</div>	
 							<div>
 							<h2>Filippos Panteli</h2>
@@ -95,9 +134,13 @@
 							<h2 class="section-title">My Skills</h2>
 								<div class="skills__lang">
 									<h4 class="list__heading"><i class="fas fa-code"></i> Languages</h4>
-										<i class="devicon-javascript-plain colored"></i>
+										<i class="devicon-javascript-plain"></i>
 										<i class="devicon-html5-plain-wordmark colored"></i>
 										<i class="devicon-python-plain-wordmark colored"></i>
+										<i class="devicon-php-plain colored"></i>
+										<i class="devicon-microsoftsqlserver-plain-wordmark colored"></i>
+										<i class="devicon-java-plain-wordmark colored"></i>
+
 								</div>
 								
 								<div class="skills__frame">
@@ -122,18 +165,23 @@
 								<div class="skills__tools">
 									<h4 class="list__heading"><i class="fas fa-laptop-code"></i> Tools</h4>
 										<i class="devicon-github-plain-wordmark colored"></i>
+										<i class="devicon-github-original-wordmark colored"></i>
 										<i class="devicon-git-plain-wordmark colored"></i>
-										<i class="devicon-heroku-plain-wordmark colored"></i>	  
+										<i class="devicon-heroku-plain-wordmark colored"></i>	
+										<i class="devicon-linux-plain colored"></i>
+										<i class="devicon-kubernetes-plain-wordmark colored"></i>
+										<i class="devicon-docker-plain-wordmark colored"></i>
 								</div>
 
 								<div class="skills__certs">
 									<h4 class="list__heading"><i class="fas fa-laptop-code"></i>Certificates</h4>
 										<ul>
+											<li><a href="FilipposPanteli-TM129 21B Networ-certificate.pdf">Networking Essentials from Cisco Networking Academy</a>
 											<li><a href="Modern JavaScript Bootcamp Course.pdf">Modern JS Bootcamp</a>
 											<li><a href="Web development bootcamp by Colt Steele.pdf">Web dev bootcamp</a></li>
 											<li><a href="IT SupportHelpDesk Fundamentals – 9 Topics.pdf">IT Support Fundamentals</a></li>
 											<li><a href="Complete IT Support Specialist Course IT Foundations.pdf">Complete IT Support :Foundations</a></li>
-											<li><a href="Learn How to Fix Wi-Fi, Computer and Networking Problems.pdf">Fix Wi-Fi, Comp and Network Probs</a>  </li></li>
+											<li><a href="Learn How to Fix Wi-Fi, Computer and Networking Problems.pdf">Fix Wi-Fi, Comp and Network Probs</a></li>
 										</ul>
 								</div>
 							</div>
